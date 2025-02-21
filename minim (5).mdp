@@ -1,0 +1,27 @@
+; Run control parameters
+integrator                = steep   ; steepest descent
+nsteps                    = 20000   ; number of steps
+
+; Geometry optimization options
+emtol                     = 10   ; converge when maximum force is smaller than this value
+emstep                    = 0.01   ; initial step-size
+
+; Output control options
+nstxout                   = 100   ; write coordinates to output trajectory
+nstlog                    = 100   ; write energies to the log file
+nstcalcenergy             = 100   ; calculate energies every this many steps
+nstenergy                 = 100   ; write energies to energy file
+compressed-x-precision    = 100   ; precision for compressed trajectory
+
+; Neighbour searching parameters
+cutoff-scheme             = Verlet   ; particle based cut-offs
+verlet-buffer-tolerance   = 0.005   ; allowed energy drift due to Verlet buffer in kJ/mol/ps per atom
+nstlist                   = 10   ; frequency to update neighbour list
+pbc                       = xyz   ; periodic boundary conditions
+
+; Options for electrostatics and vdW
+vdwtype                   = Cut-off   ; method for van der Waals
+rvdw                      = 1.2   ; short-range van der Waals cutoff (nm)
+coulombtype               = Cut-off   ; method for electrostatics
+rcoulomb                  = 1.2   ; short-range electrostatic cutoff (nm)
+epsilon-r                 = 1   ; Relative dielectric constant for the medium
