@@ -56,7 +56,6 @@ for angle in state_angles:
 ax.set_xlabel("Torsion Angle (degrees)")
 ax.set_ylabel("Temperature (K)")
 ax.set_zlabel("P(1/degree)")
-ax.set_title("Torsion Angle Distribution (KDE + Interpolation)")
 cbar_ax = inset_axes(ax, width="3%", height="50%", loc="center left", 
                      bbox_to_anchor=(1.2, 0.0, 1, 1), bbox_transform=ax.transAxes)
 cbar = fig.colorbar(surf, cax=cbar_ax)
